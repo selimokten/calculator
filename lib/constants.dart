@@ -24,3 +24,8 @@ final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
     ),
   ),
 );
+
+final TextStyle kTextStyle = TextStyle(
+  fontSize: 30.0,
+  fontWeight: FontWeight.bold,
+);

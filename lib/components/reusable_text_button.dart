@@ -16,7 +16,7 @@ class ReusableTextButton extends StatelessWidget {
           onPressed:() {
             
           },
-          child: Text(text),),
+          child: Text(text, style: kTextStyle,),),
     );
   }
 }
