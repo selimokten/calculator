@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+Color shadowColor = Colors.orange.shade600;
+
 final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
   foregroundColor: Colors.black,
-  backgroundColor: Colors.grey.shade300,
   minimumSize: Size(100, 100),
   padding: EdgeInsets.all(10.0),
   shape: RoundedRectangleBorder(
@@ -12,10 +13,8 @@ final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
   ),
 );
 
-
 final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
   foregroundColor: Colors.black,
-  backgroundColor: Colors.orange.shade300,
   minimumSize: Size(100, 100),
   padding: EdgeInsets.all(10.0),
   shape: RoundedRectangleBorder(
