@@ -1,4 +1,5 @@
 import 'package:calculator/components/reusable_text_button.dart';
+import 'package:calculator/constants.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,40 +19,41 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text('RESULT'),
+            SizedBox(height: 100,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ReusableTextButton(text: '1'),
-                ReusableTextButton(text: '2'),
-                ReusableTextButton(text: '3'),
-                ReusableTextButton(text: '+'),
+                ReusableTextButton(text: '1', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '2', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '3', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '+', style: kOptionsButtonStyle,),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ReusableTextButton(text: '4'),
-                ReusableTextButton(text: '5'),
-                ReusableTextButton(text: '6'),
-                ReusableTextButton(text: '-'),
+                ReusableTextButton(text: '4', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '5', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '6', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '-', style: kOptionsButtonStyle,),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ReusableTextButton(text: '7'),
-                ReusableTextButton(text: '8'),
-                ReusableTextButton(text: '9'),
-                ReusableTextButton(text: 'X'),
+                ReusableTextButton(text: '7', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '8', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: '9', style: kNumbersButtonStyle,),
+                ReusableTextButton(text: 'X', style: kOptionsButtonStyle,),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ReusableTextButton(text: '%'),
-                ReusableTextButton(text: '/'),
-                ReusableTextButton(text: '.'),
-                ReusableTextButton(text: '='),
+                ReusableTextButton(text: '%', style: kOptionsButtonStyle,),
+                ReusableTextButton(text: '/', style: kOptionsButtonStyle,),
+                ReusableTextButton(text: '.', style: kOptionsButtonStyle,),
+                ReusableTextButton(text: '=', style: kOptionsButtonStyle,),
               ],
             ),
           ],
