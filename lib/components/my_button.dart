@@ -9,19 +9,17 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(25),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: color,
-        ),
-        child: Center(
-          child: Text(
-            buttonText,
-            style: style,
-          ),
+    return Container(
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: color,
+      ),
+      child: Center(
+        child: Text(
+          buttonText,
+          style: style,
         ),
       ),
     );

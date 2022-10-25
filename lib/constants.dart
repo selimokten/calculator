@@ -29,12 +29,15 @@ final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
 
 final TextStyle kTextStyle = TextStyle(
   fontSize: 30.0,
-  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+
+final TextStyle kAnswerTextStyle = TextStyle(
+  fontSize: 60.0,
   color: Colors.white,
 );
 
 final TextStyle kUpButtonsStyle = TextStyle(
   fontSize: 30.0,
-  fontWeight: FontWeight.bold,
   color: Colors.black,
 );

@@ -57,7 +57,11 @@ class _MyCalculatorState extends State<MyCalculator> {
       body: Column(
         children: [
           Expanded(
-            child: Container(),
+            child: Container(
+              alignment: Alignment.centerRight,
+              padding: EdgeInsets.only(top: 200.0),
+              child: Text('065423', style: kAnswerTextStyle,),
+            ),
           ),
           Expanded(
             flex: 2,
