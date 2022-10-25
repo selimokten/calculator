@@ -51,6 +51,8 @@ class _MyCalculatorState extends State<MyCalculator> {
     '=',
   ];
 
+  String user_question = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +62,10 @@ class _MyCalculatorState extends State<MyCalculator> {
             child: Container(
               alignment: Alignment.centerRight,
               padding: EdgeInsets.only(top: 200.0),
-              child: Text('065423', style: kAnswerTextStyle,),
+              child: Text(
+                user_question,
+                style: kAnswerTextStyle,
+              ),
             ),
           ),
           Expanded(
@@ -73,12 +78,22 @@ class _MyCalculatorState extends State<MyCalculator> {
                   itemBuilder: (BuildContext context, int index) {
                     if (index == 0 || index == 1 || index == 2) {
                       return MyButton(
+                        onTap: () {
+                          setState(() {
+                            user_question += buttons[index];
+                          });
+                        },
                         color: kUpOperatorColor,
                         buttonText: buttons[index],
                         style: kUpButtonsStyle,
                       );
                     } else {
                       return MyButton(
+                        onTap: () {
+                          setState(() {
+                            user_question += buttons[index];
+                          });
+                        },
                         color: isOperator(buttons[index])
                             ? kRightOperatorColor
                             : kButtonNumbersColor,
