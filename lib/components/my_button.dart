@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:calculator/constants.dart';
 
 class MyButton extends StatelessWidget {
   MyButton({required this.color, required this.buttonText, required this.style});
