@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-Color shadowColor = Colors.orange.shade600;
+const kBackgroundColor = Color(0xFF1C1C1C);
+const kButtonNumbersColor = Color(0xFF505050);
+const kRightOperatorColor = Color(0xFFFF9500);
+const kUpOperatorColor = Color(0xFFD4D4D2);
 
 final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
   foregroundColor: Colors.black,
@@ -14,7 +17,7 @@ final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
 );
 
 final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
-  foregroundColor: Colors.black,
+  foregroundColor: Colors.white,
   minimumSize: Size(100, 100),
   padding: EdgeInsets.all(10.0),
   shape: RoundedRectangleBorder(
@@ -27,4 +30,11 @@ final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
 final TextStyle kTextStyle = TextStyle(
   fontSize: 30.0,
   fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+
+final TextStyle kUpButtonsStyle = TextStyle(
+  fontSize: 30.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
 );

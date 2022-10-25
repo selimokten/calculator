@@ -1,7 +1,8 @@
+import 'package:calculator/components/my_button.dart';
+import 'package:calculator/constants.dart';
 import 'package:flutter/material.dart';
-import 'screens/main_screen.dart';
 
-void main(){
+void main() {
   runApp(const Calculator());
 }
 
@@ -12,10 +13,91 @@ class Calculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.grey.shade700,
+        scaffoldBackgroundColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      home: const MyCalculator(),
     );
+  }
+}
+
+class MyCalculator extends StatefulWidget {
+  const MyCalculator({super.key});
+
+  @override
+  State<MyCalculator> createState() => _MyCalculatorState();
+}
+
+class _MyCalculatorState extends State<MyCalculator> {
+  final List<String> buttons = [
+    'AC',
+    '+/-',
+    '%',
+    '÷',
+    '7',
+    '8',
+    '9',
+    'x',
+    '4',
+    '5',
+    '6',
+    '-',
+    '1',
+    '2',
+    '3',
+    '+',
+    '0',
+    '.',
+    '=',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              child: GridView.builder(
+                  itemCount: buttons.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4),
+                  itemBuilder: (BuildContext context, int index) {
+                    if (index == 0 || index == 1 || index == 2) {
+                      return MyButton(
+                        color: kUpOperatorColor,
+                        buttonText: buttons[index],
+                        style: kUpButtonsStyle,
+                      );
+                    } else {
+                      return MyButton(
+                        color: isOperator(buttons[index])
+                            ? kRightOperatorColor
+                            : kButtonNumbersColor,
+                        buttonText: buttons[index],
+                        style: kTextStyle,
+                      );
+                    }
+                  }),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  bool isOperator(String button) {
+    if (button == '÷' ||
+        button == 'x' ||
+        button == '-' ||
+        button == '+' ||
+        button == '=') {
+      return true;
+    }
+    return false;
   }
 }
