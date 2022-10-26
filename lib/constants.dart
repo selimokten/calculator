@@ -1,5 +1,26 @@
 import 'package:flutter/material.dart';
 
+final List<String> buttons = [
+  'AC',
+  '+/-',
+  '%',
+  '÷',
+  '7',
+  '8',
+  '9',
+  'x',
+  '4',
+  '5',
+  '6',
+  '-',
+  '1',
+  '2',
+  '3',
+  '+',
+];
+
+String user_question = '';
+
 const kBackgroundColor = Color(0xFF1C1C1C);
 const kButtonNumbersColor = Color(0xFF505050);
 const kRightOperatorColor = Color(0xFFFF9500);
