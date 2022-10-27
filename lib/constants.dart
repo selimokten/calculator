@@ -24,10 +24,10 @@ final List<String> buttons = [
 
 String user_question = '';
 
-const kBackgroundColor = Color(0xFF1C1C1C);
-const kButtonNumbersColor = Color(0xFF505050);
-const kRightOperatorColor = Color(0xFFFF9500);
-const kUpOperatorColor = Color(0xFFD4D4D2);
+const kBackgroundColor = Color(0xFF000000);
+const kButtonNumbersColor = Color(0xFF313131);
+const kRightOperatorColor = Color(0xFFF69906);
+const kUpOperatorColor = Color(0xFF9F9F9F);
 
 final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
   foregroundColor: Colors.black,

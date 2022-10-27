@@ -1,5 +1,30 @@
 class CalculatorBrain {
-  double math_add(double first_number, double second_number){
-    return first_number + second_number;
+  late String input = '';
+
+  void setInput(String input){
+    this.input += input;
+    print(this.input);
+  }
+
+  void clearInput(){
+    this.input = '';
+  }
+
+  bool inputIsEmpty(){
+    if(input == ''){
+      return true;
+    } return false;
+  }
+
+  void changeNumber(){
+    if(this.input != ''){
+      var number = int.parse(input);
+      number *= -1;
+      this.input = number.toString();
+    } 
+  }
+
+  String getInput(){
+    return this.input;
   }
 }
