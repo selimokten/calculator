@@ -23,9 +23,9 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Container(
             alignment: Alignment.bottomRight,
-            padding: EdgeInsets.fromLTRB(0.0, 0.0, 30.0, 15.0),
+            padding: const EdgeInsets.fromLTRB(0.0, 0.0, 30.0, 15.0),
             child: Text(
-              '0',
+              calculator_brain.getResult(),
               style: kAnswerTextStyle,
             ),
           ),
