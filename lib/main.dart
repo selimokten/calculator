@@ -1,5 +1,3 @@
-import 'package:calculator/components/my_button.dart';
-import 'package:calculator/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'views/home_view.dart';
@@ -14,11 +12,8 @@ class Calculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.black,
-      ),
       debugShowCheckedModeBanner: false,
-      home: const HomeView(),
+      home: HomeView(),
     );
   }
 }

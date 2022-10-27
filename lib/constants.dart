@@ -17,9 +17,12 @@ final List<String> buttons = [
   '2',
   '3',
   '+',
+  '0',
+  '.',
+  '=',
 ];
 
-String user_question = '';
+String user_question = 'INPUT';
 
 const kBackgroundColor = Color(0xFF1C1C1C);
 const kButtonNumbersColor = Color(0xFF505050);

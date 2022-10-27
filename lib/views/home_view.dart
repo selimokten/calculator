@@ -1,7 +1,7 @@
+import 'package:calculator/components/my_button.dart';
 import 'package:calculator/components/my_second_button.dart';
 import 'package:flutter/material.dart';
-
-import '../components/my_button.dart';
+import '../components/calculate_screen.dart';
 import '../constants.dart';
 
 class HomeView extends StatefulWidget {
@@ -15,106 +15,116 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          //Calculater Screen
-          Expanded(
-            child: Container(
-              color: Colors.amber,
-              alignment: Alignment.centerRight,
-              padding: EdgeInsets.only(top: 220.0),
-              child: Text(
-                user_question,
-                style: kAnswerTextStyle,
-              ),
-            ),
+          CalculateScreen(),
+          Row(
+            children: [
+              MyButton(
+                  color: kUpOperatorColor,
+                  buttonText: buttons[0],
+                  style: kUpButtonsStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kUpOperatorColor,
+                  buttonText: buttons[1],
+                  style: kUpButtonsStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kUpOperatorColor,
+                  buttonText: buttons[2],
+                  style: kUpButtonsStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kRightOperatorColor,
+                  buttonText: buttons[3],
+                  style: kTextStyle,
+                  onTap: () {}),
+            ],
           ),
-          //Calculater Buttons
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.red,
-              margin: EdgeInsets.only(top: 60),
-              child: GridView.builder(
-                itemCount: buttons.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                ),
-                itemBuilder: (BuildContext context, int index) {
-                  if (index == 0 || index == 1 || index == 2) {
-                    return MyButton(
-                      onTap: () {
-                        setState(() {
-                          user_question += buttons[index];
-                        });
-                      },
-                      color: kUpOperatorColor,
-                      buttonText: buttons[index],
-                      style: kUpButtonsStyle,
-                    );
-                  } else if (buttons[index] == '0') {
-                    return MySecondButton(
-                      color: kButtonNumbersColor,
-                      buttonText: '0',
-                      style: kTextStyle,
-                      onTap: (() {}),
-                    );
-                  } else {
-                    return MyButton(
-                      onTap: () {
-                        setState(() {
-                          user_question += buttons[index];
-                        });
-                      },
-                      color: isOperator(buttons[index])
-                          ? kRightOperatorColor
-                          : kButtonNumbersColor,
-                      buttonText: buttons[index],
-                      style: kTextStyle,
-                    );
-                  }
-                },
-              ),
-            ),
+          Row(
+            children: [
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[4],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[5],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[6],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kRightOperatorColor,
+                  buttonText: buttons[7],
+                  style: kTextStyle,
+                  onTap: () {}),
+            ],
           ),
-          Container(
-            child: Row(
-              children: [
-                MySecondButton(
-                    color: kButtonNumbersColor,
-                    buttonText: '0',
-                    style: kTextStyle,
-                    onTap: (() {})),
-                Expanded(
-                  child: MyButton(
-                      color: kButtonNumbersColor,
-                      buttonText: '.',
-                      style: kTextStyle,
-                      onTap: (() {})),
-                ),
-                Expanded(
-                  child: MyButton(
-                      color: kRightOperatorColor,
-                      buttonText: '=',
-                      style: kTextStyle,
-                      onTap: (() {})),
-                ),
-              ],
-            ),
+          Row(
+            children: [
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[8],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[9],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[10],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kRightOperatorColor,
+                  buttonText: buttons[11],
+                  style: kTextStyle,
+                  onTap: () {}),
+            ],
+          ),
+          Row(
+            children: [
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[12],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[13],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[14],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kRightOperatorColor,
+                  buttonText: buttons[15],
+                  style: kTextStyle,
+                  onTap: () {}),
+            ],
+          ),
+          Row(
+            children: [
+              MySecondButton(color: kButtonNumbersColor, buttonText: buttons[16], style: kTextStyle, onTap: (){}),
+              MyButton(color: kButtonNumbersColor, buttonText: buttons[17], style: kTextStyle, onTap: (){}),
+              MyButton(color: kRightOperatorColor, buttonText: buttons[18], style: kTextStyle, onTap: (){}),
+            ],
           ),
         ],
       ),
     );
-  }
-
-  bool isOperator(String button) {
-    if (button == '÷' ||
-        button == 'x' ||
-        button == '-' ||
-        button == '+' ||
-        button == '=') {
-      return true;
-    }
-    return false;
   }
 }
