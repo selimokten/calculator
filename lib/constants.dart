@@ -22,7 +22,7 @@ final List<String> buttons = [
   '=',
 ];
 
-String user_question = 'INPUT';
+String user_question = '';
 
 const kBackgroundColor = Color(0xFF1C1C1C);
 const kButtonNumbersColor = Color(0xFF505050);

@@ -1,3 +1,4 @@
+import 'package:calculator/calculator_brain.dart';
 import 'package:calculator/components/my_button.dart';
 import 'package:calculator/components/my_second_button.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,8 @@ class HomeView extends StatefulWidget {
   @override
   State<HomeView> createState() => _HomeViewState();
 }
+
+CalculatorBrain calculator_brain = CalculatorBrain();
 
 class _HomeViewState extends State<HomeView> {
   @override
@@ -118,9 +121,21 @@ class _HomeViewState extends State<HomeView> {
           ),
           Row(
             children: [
-              MySecondButton(color: kButtonNumbersColor, buttonText: buttons[16], style: kTextStyle, onTap: (){}),
-              MyButton(color: kButtonNumbersColor, buttonText: buttons[17], style: kTextStyle, onTap: (){}),
-              MyButton(color: kRightOperatorColor, buttonText: buttons[18], style: kTextStyle, onTap: (){}),
+              MySecondButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[16],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kButtonNumbersColor,
+                  buttonText: buttons[17],
+                  style: kTextStyle,
+                  onTap: () {}),
+              MyButton(
+                  color: kRightOperatorColor,
+                  buttonText: buttons[18],
+                  style: kTextStyle,
+                  onTap: () {}),
             ],
           ),
         ],
