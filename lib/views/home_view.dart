@@ -167,7 +167,9 @@ class _HomeViewState extends State<HomeView> {
                   color: kRightOperatorColor,
                   buttonText: buttons[15],
                   style: kTextStyle,
-                  onTap: () {}),
+                  onTap: () {
+                    calculator_brain.math_add();
+                  }),
             ],
           ),
           Row(

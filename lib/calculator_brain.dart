@@ -32,6 +32,7 @@ class CalculatorBrain {
   void math_add(){
     number = int.parse(this.input);
     clearInput();
+    input += number.toString();
     print(number);
   }
 }
