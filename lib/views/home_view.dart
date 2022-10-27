@@ -46,7 +46,9 @@ class _HomeViewState extends State<HomeView> {
                   buttonText: buttons[1],
                   style: kUpButtonsStyle,
                   onTap: () {
-                    setState(() {});
+                    setState(() {
+                      calculator_brain.changeNumber();
+                    });
                   }),
               MyButton(
                   color: kUpOperatorColor,

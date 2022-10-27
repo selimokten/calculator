@@ -1,5 +1,6 @@
 class CalculatorBrain {
   late String input = '';
+  late int number;
 
   void setInput(String input){
     this.input += input;
@@ -26,5 +27,11 @@ class CalculatorBrain {
 
   String getInput(){
     return this.input;
+  }
+
+  void math_add(){
+    number = int.parse(this.input);
+    clearInput();
+    print(number);
   }
 }
