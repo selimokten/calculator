@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:calculator/calculator_brain.dart';
 
 class MyButton extends StatelessWidget {
-  MyButton({required this.color, required this.buttonText, required this.style, required this.onTap});
+  MyButton({required this.color, required this.buttonText, required this.style});
 
   final color;
   final String buttonText;
   final TextStyle style;
-  final VoidCallback onTap;
+
+  CalculatorBrain calculatorBrain = CalculatorBrain();
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: (){},
       child: Container(
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(15),

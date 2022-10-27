@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
             alignment: Alignment.bottomRight,
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 30.0, 15.0),
             child: Text(
-              calculator_brain.getInput(),
+              '0',
               style: kAnswerTextStyle,
             ),
           ),
@@ -33,33 +33,25 @@ class _HomeViewState extends State<HomeView> {
             children: [
               MyButton(
                   color: kUpOperatorColor,
-                  buttonText:
-                      calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
+                  buttonText: 'AC',
+                      // calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
                   style: kUpButtonsStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.clearInput();
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kUpOperatorColor,
                   buttonText: buttons[1],
                   style: kUpButtonsStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.changeNumber();
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kUpOperatorColor,
                   buttonText: buttons[2],
                   style: kUpButtonsStyle,
-                  onTap: () {}),
+                 ),
               MyButton(
                   color: kRightOperatorColor,
                   buttonText: buttons[3],
                   style: kTextStyle,
-                  onTap: () {}),
+                  ),
             ],
           ),
           Row(
@@ -68,34 +60,22 @@ class _HomeViewState extends State<HomeView> {
                   color: kButtonNumbersColor,
                   buttonText: buttons[4],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[4]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[5],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[5]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[6],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[6]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kRightOperatorColor,
                   buttonText: buttons[7],
                   style: kTextStyle,
-                  onTap: () {}),
+                  ),
             ],
           ),
           Row(
@@ -104,34 +84,22 @@ class _HomeViewState extends State<HomeView> {
                   color: kButtonNumbersColor,
                   buttonText: buttons[8],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[8]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[9],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[9]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[10],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[10]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kRightOperatorColor,
                   buttonText: buttons[11],
                   style: kTextStyle,
-                  onTap: () {}),
+                  ),
             ],
           ),
           Row(
@@ -140,36 +108,22 @@ class _HomeViewState extends State<HomeView> {
                   color: kButtonNumbersColor,
                   buttonText: buttons[12],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[12]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[13],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[13]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[14],
                   style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[14]);
-                    });
-                  }),
+                  ),
               MyButton(
                   color: kRightOperatorColor,
                   buttonText: buttons[15],
                   style: kTextStyle,
-                  onTap: () {
-                    calculator_brain.math_add();
-                  }),
+                  ),
             ],
           ),
           Row(
@@ -177,22 +131,17 @@ class _HomeViewState extends State<HomeView> {
               MySecondButton(
                   color: kButtonNumbersColor,
                   buttonText: buttons[16],
-                  style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.setInput(buttons[16]);
-                    });
-                  }),
+                  style: kTextStyle,),
               MyButton(
-                  color: kButtonNumbersColor,
-                  buttonText: buttons[17],
-                  style: kTextStyle,
-                  onTap: () {}),
+                color: kButtonNumbersColor,
+                buttonText: buttons[17],
+                style: kTextStyle,
+              ),
               MyButton(
-                  color: kRightOperatorColor,
-                  buttonText: buttons[18],
-                  style: kTextStyle,
-                  onTap: () {}),
+                color: kRightOperatorColor,
+                buttonText: buttons[18],
+                style: kTextStyle,
+              ),
             ],
           ),
         ],
