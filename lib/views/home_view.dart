@@ -33,8 +33,7 @@ class _HomeViewState extends State<HomeView> {
             children: [
               MyButton(
                   color: kUpOperatorColor,
-                  buttonText: 'AC',
-                      // calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
+                  buttonText: calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
                   style: kUpButtonsStyle,
                   ),
               MyButton(

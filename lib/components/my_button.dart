@@ -14,7 +14,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap:() {
-        
+        calculatorBrain.calculate(buttonText);
       },
       child: Container(
         margin: EdgeInsets.all(10),
