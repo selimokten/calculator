@@ -1,48 +1,74 @@
 class CalculatorBrain {
-
   late String text = '123';
-  late int first_number = 0;
-  late int second_number = 0;
+  late String result = '';
 
   late String pre_operator = '';
 
-  void calculate(String operator){
-    if(operator == 'AC' || operator == 'C' || operator == '%' || operator == '÷' || operator == 'x' || operator == '+'){
+
+  void calculate(String operator) {
+    if (true) {
       switch (operator) {
-        case 'AC':
-          clearInput();
-          break;
         case 'C':
-          clearInput();
+          {
+            clearInput();
+            print('C kodu çalıştı');
+          }
           break;
-        // case '%':
-        //   firstNumberIsEmpty() ? pre_operator = '%' :   
-        //   break;
-      }
-    } else {
-      switch (operator) {
+        case 'AC':
+          {
+            clearInput();
+            print('AC kodu çalıştı');
+          }
+          break;
         case '+':
-          second_number += first_number;
+          {
+            print('+ kodu çalıştı');
+          }
+          break;
+        case '-':
+          {
+            print('- kodu çalıştı');
+          }
           break;
         default:
+          result += operator;
+          print(result);   
       }
     }
+    // if(operator == 'C'){
+    //   // switch (operator) {
+    //   //   case 'AC':
+    //   //     clearInput();
+    //   //     print('Kod çalıştı');
+    //   //     break;
+    //   //   case 'C':
+    //   //     clearInput();
+    //   //     print('kod çalıştı')
+    //   //     break;
+    //   //   // case '%':
+    //   //   //   firstNumberIsEmpty() ? pre_operator = '%' :
+    //   //   //   break;
+    //   //}
+    //   clearInput();
+    //   print('Kod çalıştı');
+    // } else {
+    //   result += int.parse(operator);
+    // }
   }
 
-  String getResult(){
+  String getResult() {
     return text;
   }
 
-  bool inputIsEmpty(){
+  bool inputIsEmpty() {
     return text == '' ? true : false;
   }
 
-  bool firstNumberIsEmpty(){
-    return first_number == '0' ? true : false;
+  bool firstNumberIsEmpty() {
+    return result == '0' ? true : false;
   }
 
-  void clearInput(){
-    text = '';   
+  void clearInput() {
+    text = '';
   }
-
 }
