@@ -1,74 +1,66 @@
 class CalculatorBrain {
-  late String text = '123';
+  late int first_number = 0;
+  late int second_number = 0;
   late String result = '';
-
-  late String pre_operator = '';
-
+  late String text = '';
+  late String operation = '';
 
   void calculate(String operator) {
-    if (true) {
-      switch (operator) {
-        case 'C':
-          {
-            clearInput();
-            print('C kodu çalıştı');
-          }
-          break;
-        case 'AC':
-          {
-            clearInput();
-            print('AC kodu çalıştı');
-          }
-          break;
+    if (operator == 'AC' || operator == 'C') {
+      clearInput();
+    } else if (operator == '+' ||
+        operator == '-' ||
+        operator == '÷' ||
+        operator == 'x' ||
+        operator == '%') {
+      first_number = int.parse(text);
+      print(first_number);
+      result = '';
+      operation = operator;
+    } else if (operator == '+/-') {
+      int variable;
+      variable = int.parse(result) * -1;
+      result = variable.toString();
+      print(result);
+    } else if (operator == '=') {
+      second_number = int.parse(text);
+      switch (operation) {
         case '+':
-          {
-            print('+ kodu çalıştı');
-          }
+          result = (first_number + second_number).toString();
+          print(result);
           break;
         case '-':
-          {
-            print('- kodu çalıştı');
-          }
+          result = (first_number - second_number).toString();
+          break;
+        case '÷':
+          result = (first_number ~/ second_number).toString();
+          break;
+        case 'x':
+          result = (first_number * second_number).toString();
+          break;
+        case '%':
+          result = (first_number % second_number).toString();
           break;
         default:
-          result += operator;
-          print(result);   
       }
+    } else {
+      result += operator;
+      print(result);
     }
-    // if(operator == 'C'){
-    //   // switch (operator) {
-    //   //   case 'AC':
-    //   //     clearInput();
-    //   //     print('Kod çalıştı');
-    //   //     break;
-    //   //   case 'C':
-    //   //     clearInput();
-    //   //     print('kod çalıştı')
-    //   //     break;
-    //   //   // case '%':
-    //   //   //   firstNumberIsEmpty() ? pre_operator = '%' :
-    //   //   //   break;
-    //   //}
-    //   clearInput();
-    //   print('Kod çalıştı');
-    // } else {
-    //   result += int.parse(operator);
-    // }
   }
 
   String getResult() {
-    return text;
+    return text = result;
   }
 
   bool inputIsEmpty() {
     return text == '' ? true : false;
   }
 
-  bool firstNumberIsEmpty() {
-    return result == '0' ? true : false;
-  }
-
   void clearInput() {
+    first_number = 0;
+    second_number = 0;
+    result = '';
     text = '';
   }
 }
