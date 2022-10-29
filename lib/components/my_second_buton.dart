@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyButton extends StatelessWidget {
-  MyButton(
+class MySecondButton extends StatelessWidget {
+  MySecondButton(
       {required this.color,
       required this.buttonText,
       required this.style,
@@ -18,14 +18,21 @@ class MyButton extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: ElevatedButton(
         style: TextButton.styleFrom(
+          alignment: Alignment.centerLeft,
           backgroundColor: color,
-          minimumSize: Size(75.0, 75.0),
-          shape: CircleBorder(),
+          minimumSize: Size(170, 75.0),
           padding: EdgeInsets.all(15),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
         ),
         onPressed: onTap,
-        child: Center(
-          child: Text(buttonText, style: style,),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            buttonText,
+            style: style,
+          ),
         ),
       ),
     );

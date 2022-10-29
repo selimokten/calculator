@@ -1,8 +1,10 @@
 import 'package:calculator/calculator_brain.dart';
-import 'package:calculator/components/my_button.dart';
-import 'package:calculator/components/my_second_button.dart';
+import 'package:calculator/components/my_button2.dart';
+import 'package:calculator/components/my_second_button2.dart';
 import 'package:flutter/material.dart';
+import '../components/my_second_buton.dart';
 import '../constants.dart';
+import 'package:calculator/components/my_button.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -29,51 +31,49 @@ class _HomeViewState extends State<HomeView> {
               style: kAnswerTextStyle,
             ),
           ),
-          Flexible(
-            child: Row(
-              children: [
-                MyButton(
-                  color: kUpOperatorColor,
-                  buttonText: calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
-                  style: kUpButtonsStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.calculate(buttons[0]);
-                    });
-                  },
-                ),
-                MyButton(
-                  color: kUpOperatorColor,
-                  buttonText: buttons[1],
-                  style: kUpButtonsStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.calculate(buttons[1]);
-                    });
-                  },
-                ),
-                MyButton(
-                  color: kUpOperatorColor,
-                  buttonText: buttons[2],
-                  style: kUpButtonsStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.calculate(buttons[2]);
-                    });
-                  },
-                ),
-                MyButton(
-                  color: kRightOperatorColor,
-                  buttonText: buttons[3],
-                  style: kTextStyle,
-                  onTap: () {
-                    setState(() {
-                      calculator_brain.calculate(buttons[3]);
-                    });
-                  },
-                ),
-              ],
-            ),
+          Row(
+            children: [
+              MyButton(
+                color: kUpOperatorColor,
+                buttonText: calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
+                style: kUpButtonsStyle,
+                onTap: () {
+                  setState(() {
+                    calculator_brain.calculate(buttons[0]);
+                  });
+                },
+              ),
+              MyButton(
+                color: kUpOperatorColor,
+                buttonText: buttons[1],
+                style: kUpButtonsStyle,
+                onTap: () {
+                  setState(() {
+                    calculator_brain.calculate(buttons[1]);
+                  });
+                },
+              ),
+              MyButton(
+                color: kUpOperatorColor,
+                buttonText: buttons[2],
+                style: kUpButtonsStyle,
+                onTap: () {
+                  setState(() {
+                    calculator_brain.calculate(buttons[2]);
+                  });
+                },
+              ),
+              MyButton(
+                color: kRightOperatorColor,
+                buttonText: buttons[3],
+                style: kTextStyle,
+                onTap: () {
+                  setState(() {
+                    calculator_brain.calculate(buttons[3]);
+                  });
+                },
+              ),
+            ],
           ),
           Row(
             children: [

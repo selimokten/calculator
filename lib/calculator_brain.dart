@@ -18,10 +18,11 @@ class CalculatorBrain {
       result = '';
       operation = operator;
     } else if (operator == '+/-') {
-      int variable;
-      variable = int.parse(result) * -1;
-      result = variable.toString();
-      print(result);
+      if (inputIsEmpty() == false) {
+        int variable;
+        variable = int.parse(result) * -1;
+        result = variable.toString();
+      }
     } else if (operator == '=') {
       second_number = int.parse(text);
       switch (operation) {
@@ -44,8 +45,8 @@ class CalculatorBrain {
         default:
       }
     } else {
+      print(operator);
       result += operator;
-      print(result);
     }
   }
 
