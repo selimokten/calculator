@@ -1,6 +1,4 @@
 import 'package:calculator/calculator_brain.dart';
-import 'package:calculator/components/my_button2.dart';
-import 'package:calculator/components/my_second_button2.dart';
 import 'package:flutter/material.dart';
 import '../components/my_second_buton.dart';
 import '../constants.dart';
@@ -13,7 +11,7 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-CalculatorBrain calculator_brain = CalculatorBrain();
+CalculatorBrain calculatorBrain = CalculatorBrain();
 
 class _HomeViewState extends State<HomeView> {
   @override
@@ -23,219 +21,235 @@ class _HomeViewState extends State<HomeView> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          // Calculater Output
           Container(
             alignment: Alignment.bottomRight,
             padding: const EdgeInsets.fromLTRB(0.0, 0.0, 30.0, 15.0),
             child: Text(
-              calculator_brain.getResult(),
-              style: kAnswerTextStyle,
+              calculatorBrain.getResult(),
+              style: kOutputTextStyle,
             ),
           ),
+          //
+          // Buttons Create First Row
+          // 1
           Row(
             children: [
               MyButton(
-                color: kUpOperatorColor,
-                buttonText: calculator_brain.inputIsEmpty() ? buttons[0] : 'C',
+                color: kUpButtonColor,
+                buttonText: calculatorBrain.inputIsEmpty() ? buttons[0] : 'C',
                 style: kUpButtonsStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[0]);
+                    calculatorBrain.calculate(buttons[0]);
                   });
                 },
               ),
               MyButton(
-                color: kUpOperatorColor,
+                color: kUpButtonColor,
                 buttonText: buttons[1],
                 style: kUpButtonsStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[1]);
+                    calculatorBrain.calculate(buttons[1]);
                   });
                 },
               ),
               MyButton(
-                color: kUpOperatorColor,
+                color: kUpButtonColor,
                 buttonText: buttons[2],
                 style: kUpButtonsStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[2]);
+                    calculatorBrain.calculate(buttons[2]);
                   });
                 },
               ),
               MyButton(
-                color: kRightOperatorColor,
+                color: kRightButtonColor,
                 buttonText: buttons[3],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[3]);
+                    calculatorBrain.calculate(buttons[3]);
                   });
                 },
               ),
             ],
           ),
+          //
+          // Buttons Create Second Row
+          // 2
           Row(
             children: [
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[4],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[4]);
+                    calculatorBrain.calculate(buttons[4]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[5],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[5]);
+                    calculatorBrain.calculate(buttons[5]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[6],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[6]);
+                    calculatorBrain.calculate(buttons[6]);
                   });
                 },
               ),
               MyButton(
-                color: kRightOperatorColor,
+                color: kRightButtonColor,
                 buttonText: buttons[7],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[7]);
+                    calculatorBrain.calculate(buttons[7]);
                   });
                 },
               ),
             ],
           ),
+          //
+          // Buttons Create Third Row
+          // 3
           Row(
             children: [
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[8],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[8]);
+                    calculatorBrain.calculate(buttons[8]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[9],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[9]);
+                    calculatorBrain.calculate(buttons[9]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[10],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[10]);
+                    calculatorBrain.calculate(buttons[10]);
                   });
                 },
               ),
               MyButton(
-                color: kRightOperatorColor,
+                color: kRightButtonColor,
                 buttonText: buttons[11],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[11]);
+                    calculatorBrain.calculate(buttons[11]);
                   });
                 },
               ),
             ],
           ),
+          //
+          // Buttons Create Fourth Row
+          // 4
           Row(
             children: [
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[12],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[12]);
+                    calculatorBrain.calculate(buttons[12]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[13],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[13]);
+                    calculatorBrain.calculate(buttons[13]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[14],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[14]);
+                    calculatorBrain.calculate(buttons[14]);
                   });
                 },
               ),
               MyButton(
-                color: kRightOperatorColor,
+                color: kRightButtonColor,
                 buttonText: buttons[15],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[15]);
+                    calculatorBrain.calculate(buttons[15]);
                   });
                 },
               ),
             ],
           ),
+          //
+          // Buttons Create Fifth Row
+          // 5          
           Row(
             children: [
               MySecondButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[16],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[16]);
+                    calculatorBrain.calculate(buttons[16]);
                   });
                 },
               ),
               MyButton(
-                color: kButtonNumbersColor,
+                color: kMainButtonColor,
                 buttonText: buttons[17],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[17]);
+                    calculatorBrain.calculate(buttons[17]);
                   });
                 },
               ),
               MyButton(
-                color: kRightOperatorColor,
+                color: kRightButtonColor,
                 buttonText: buttons[18],
-                style: kTextStyle,
+                style: kButtonTextStyle,
                 onTap: () {
                   setState(() {
-                    calculator_brain.calculate(buttons[18]);
+                    calculatorBrain.calculate(buttons[18]);
                   });
                 },
               ),

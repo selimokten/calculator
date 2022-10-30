@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// List of Buttons
 final List<String> buttons = [
   'AC',
   '+/-',
@@ -22,46 +23,26 @@ final List<String> buttons = [
   '=',
 ];
 
-String user_question = '';
+/// COLORS ///
+const kBackgroundColor = Color(0xFF000000); // Background Color
+const kMainButtonColor = Color(0xFF313131); // Colors number buttons
+const kRightButtonColor = Color(0xFFF69906);// Colors right operator buttons
+const kUpButtonColor = Color(0xFF9F9F9F);   // Colors up operator buttons
 
-const kBackgroundColor = Color(0xFF000000);
-const kButtonNumbersColor = Color(0xFF313131);
-const kRightOperatorColor = Color(0xFFF69906);
-const kUpOperatorColor = Color(0xFF9F9F9F);
-
-final ButtonStyle kNumbersButtonStyle = TextButton.styleFrom(
-  foregroundColor: Colors.black,
-  minimumSize: Size(100, 100),
-  padding: EdgeInsets.all(10.0),
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(
-      Radius.circular(50.0),
-    ),
-  ),
-);
-
-final ButtonStyle kOptionsButtonStyle = TextButton.styleFrom(
-  foregroundColor: Colors.white,
-  minimumSize: Size(100, 100),
-  padding: EdgeInsets.all(10.0),
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(
-      Radius.circular(50.0),
-    ),
-  ),
-);
-
-final TextStyle kTextStyle = TextStyle(
+//Main button text style
+const TextStyle kButtonTextStyle = TextStyle(
   fontSize: 30.0,
   color: Colors.white,
 );
 
-final TextStyle kAnswerTextStyle = TextStyle(
+//Calculate screen output text style
+const TextStyle kOutputTextStyle = TextStyle(
   fontSize: 60.0,
   color: Colors.white,
 );
 
-final TextStyle kUpButtonsStyle = TextStyle(
+//Up operators text style
+const TextStyle kUpButtonsStyle = TextStyle(
   fontSize: 30.0,
   color: Colors.black,
 );

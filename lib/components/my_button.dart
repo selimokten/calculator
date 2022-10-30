@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  MyButton(
-      {required this.color,
+  const MyButton(
+      {super.key, required this.color,
       required this.buttonText,
       required this.style,
       required this.onTap});
 
-  final color;
+  final Color color;
   final String buttonText;
   final TextStyle style;
   final VoidCallback onTap;
@@ -19,9 +19,9 @@ class MyButton extends StatelessWidget {
       child: ElevatedButton(
         style: TextButton.styleFrom(
           backgroundColor: color,
-          minimumSize: Size(75.0, 75.0),
-          shape: CircleBorder(),
-          padding: EdgeInsets.all(15),
+          minimumSize: const Size(75.0, 75.0),
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(15),
         ),
         onPressed: onTap,
         child: Center(

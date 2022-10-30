@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MySecondButton extends StatelessWidget {
-  MySecondButton(
-      {required this.color,
+  const MySecondButton(
+      {super.key, required this.color,
       required this.buttonText,
       required this.style,
       required this.onTap});
 
-  final color;
+  final Color color;
   final String buttonText;
   final TextStyle style;
   final VoidCallback onTap;
@@ -20,8 +20,8 @@ class MySecondButton extends StatelessWidget {
         style: TextButton.styleFrom(
           alignment: Alignment.centerLeft,
           backgroundColor: color,
-          minimumSize: Size(170, 75.0),
-          padding: EdgeInsets.all(15),
+          minimumSize: const Size(170, 75.0),
+          padding: const EdgeInsets.all(15),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),

@@ -1,6 +1,6 @@
 class CalculatorBrain {
-  late int first_number = 0;
-  late int second_number = 0;
+  late int firstNumber = 0;
+  late int secondNumber = 0;
   late String result = '';
   late String text = '';
   late String operation = '';
@@ -13,8 +13,7 @@ class CalculatorBrain {
         operator == '÷' ||
         operator == 'x' ||
         operator == '%') {
-      first_number = int.parse(text);
-      print(first_number);
+      firstNumber = int.parse(text);
       result = '';
       operation = operator;
     } else if (operator == '+/-') {
@@ -24,28 +23,26 @@ class CalculatorBrain {
         result = variable.toString();
       }
     } else if (operator == '=') {
-      second_number = int.parse(text);
+      secondNumber = int.parse(text);
       switch (operation) {
         case '+':
-          result = (first_number + second_number).toString();
-          print(result);
+          result = (firstNumber + secondNumber).toString();
           break;
         case '-':
-          result = (first_number - second_number).toString();
+          result = (firstNumber - secondNumber).toString();
           break;
         case '÷':
-          result = (first_number ~/ second_number).toString();
+          result = (firstNumber ~/ secondNumber).toString();
           break;
         case 'x':
-          result = (first_number * second_number).toString();
+          result = (firstNumber * secondNumber).toString();
           break;
         case '%':
-          result = (first_number % second_number).toString();
+          result = (firstNumber % secondNumber).toString();
           break;
         default:
       }
     } else {
-      print(operator);
       result += operator;
     }
   }
@@ -59,8 +56,8 @@ class CalculatorBrain {
   }
 
   void clearInput() {
-    first_number = 0;
-    second_number = 0;
+    firstNumber = 0;
+    secondNumber = 0;
     result = '';
     text = '';
   }
