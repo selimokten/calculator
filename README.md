@@ -1,13 +1,10 @@
 # Calculator
 
-<img src="screenshots/Screenshot_1.png" width="270" height="585" >
+<img src="screenshots/Screenshot_1.png" width="270" height="585" >    <img src="screenshots/Screenshot_2.png" width="270" height="585" >
 
 ---
 
-<img src="screenshots/Screenshot_2.png" width="270" height="585" >
-
 > It's just a simple calculator.
-
 
 ---
 
